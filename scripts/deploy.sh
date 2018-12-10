@@ -1,15 +1,15 @@
 #!/bin/bash
-BUILD_PATH=$(ls /home/ec2-user/build/*.jar)
+BUILD_PATH=$(ls /home/ec2-user/build/target/*.jar)
 JAR_NAME=$(basename $BUILD_PATH)
 echo "> build 파일명: $JAR_NAME"
 
 echo "> build 파일 복사"
-DEPLOY_PATH=/home/ec2-user/
+DEPLOY_PATH=/home/ec2-user/deploy
 cp $BUILD_PATH $DEPLOY_PATH
 
 echo "> springboot-deploy.jar 교체"
 CP_JAR_PATH=$DEPLOY_PATH$JAR_NAME
-APPLICATION_JAR_NAME=springboot-deploy.jar
+APPLICATION_JAR_NAME=demo-0.0.1-SNAPSHOT.jar
 APPLICATION_JAR=$DEPLOY_PATH$APPLICATION_JAR_NAME
 
 ln -Tfs $CP_JAR_PATH $APPLICATION_JAR
