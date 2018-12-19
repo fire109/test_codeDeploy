@@ -10,5 +10,5 @@ public class HelloWordController {
     public String getHelloWord() {
         return "helloWord";
     }
-    
+
 }
