@@ -8,6 +8,11 @@ public class HelloWordController {
 
     @GetMapping("/hello")
     public String getHelloWord() {
+        return "hello";
+    }
+    
+    @GetMapping("/helloWord")
+    public String getHelloWord() {
         return "helloWord";
     }
 
