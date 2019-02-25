@@ -8,4 +8,6 @@ phases:
 
 artifacts:
   files:
+    - appspec.yml
     - target/demo-1.0-SNAPSHOT.jar
+  discard-paths: yes
